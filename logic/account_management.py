@@ -14,7 +14,7 @@ def stribog_hash(data):
     """Вычисляет хеш строки data, используя внешнюю программу stribog.exe."""
     try:
         # Вызов stribog.exe с аргументом data и получение хеша из вывода
-        result = subprocess.run(["my_crypto/stribog.exe", data], capture_output=True, text=True, check=True)
+        result = subprocess.run(["my_crypto/stribog.exe", str(data)], capture_output=True, text=True, check=True)
         return result.stdout.strip()  # Убираем лишние пробелы/переносы строк
     except subprocess.CalledProcessError as e:
         print("Ошибка при вызове stribog.exe:", e)

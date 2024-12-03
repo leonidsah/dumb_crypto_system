@@ -75,7 +75,7 @@ class AuthScreen(QWidget):
                 if logic.values.username != "admin":
                     # Получаем MainAppScreen из QStackedWidget и вызываем hide_account_tab
                     main_app_screen = self.parentWidget().widget(2)
-                    main_app_screen.hide_accounts_tab()
+                    main_app_screen.hide_unprivileged()
                 self.status_ql.setText("")
                 self.parentWidget().setCurrentIndex(2)
             else:

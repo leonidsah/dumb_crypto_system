@@ -11,7 +11,7 @@ from my_crypto.rsa import generate_keys, export_rsa_key
 class KeysTab(QWidget):
     def __init__(self):
         super().__init__()
-        qvbl = QVBoxLayout()
+        layout = QVBoxLayout()
         # Вкладка "Ключи"
         keys_tabs = QTabWidget()
         rsa_keys_tab = QWidget()
@@ -86,8 +86,8 @@ class KeysTab(QWidget):
         keys_tabs.addTab(kuznechik_qvbl, "Кузнечик")
         rsa_keys_tab.setLayout(rsa_qvbl)
         kuznechik_qvbl.setLayout(self.kuz_keys_layout)
-        qvbl.addWidget(keys_tabs)
-        self.setLayout(qvbl)
+        layout.addWidget(keys_tabs)
+        self.setLayout(layout)
 
     def generate_rsa_keys(self):
         # Пока функция выполняется сделать поля ввода серыми

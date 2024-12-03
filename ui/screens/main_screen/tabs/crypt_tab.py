@@ -1,3 +1,4 @@
+import time
 import traceback
 
 from PyQt5.QtWidgets import QWidget, QLabel, QHBoxLayout, QPushButton, QComboBox, QLineEdit, QVBoxLayout, QFileDialog
@@ -6,8 +7,11 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfgen import canvas
 
+import logic.values
 import my_crypto.rsa
 from logic import account_management
+from logic.account_management import stribog_hash
+from logic.logs import add_log_to_yaml
 from my_crypto import kuznechik_wrapper
 
 
@@ -182,9 +186,7 @@ class CryptTab(QWidget):
 
     def encrypt_qpb_clicked(self):
         try:
-            # Получаем выбранные файл и ключ, а также алгоритм
-            file_name = self.source_qle.text()
-            key_name = self.crypt_key_qle.text()
+            action = "encrypt"
             match self.crypt_algo_qcb.currentIndex():
                 case 0:
                     # RSA
@@ -192,12 +194,26 @@ class CryptTab(QWidget):
                     file_path = self.source_qle.text()
                     cipher = my_crypto.rsa.import_and_encrypt(key_path, file_path, "encrypt")
                     self.result = cipher
+                    action += " RSA"
                 case 1:
                     # Kuznechik
                     key = self.crypt_key_qle.text()
                     file_path = self.source_qle.text()
                     cipher = kuznechik_wrapper.kuznechik_encrypt(key, file_path)
                     self.result = cipher
+                    action += " KUZ"
+
+            timestamp = int(time.time())
+            result_hash = stribog_hash(self.result)
+            signature = 0
+            try:
+                signature = self.form_signature()
+            except Exception as e:
+                print("Signature creation failed.")
+                print(e)
+                traceback_str = ''.join(traceback.format_tb(e.__traceback__))
+                print(traceback_str)
+            add_log_to_yaml(logic.values.username, action, self.result, timestamp, result_hash, signature)
 
             # После шифрования можно активировать кнопку для скачивания PDF с ЭЦП
             self.sign_pub_key_qpb.setEnabled(True)
@@ -214,6 +230,7 @@ class CryptTab(QWidget):
             # Получаем выбранные файл и ключ, а также алгоритм
             file_name = self.source_qle.text()
             key_name = self.crypt_key_qle.text()
+            action = "decrypt"
             match self.crypt_algo_qcb.currentIndex():
                 case 0:
                     # RSA
@@ -221,12 +238,22 @@ class CryptTab(QWidget):
                     file_path = self.source_qle.text()
                     message = my_crypto.rsa.import_and_encrypt(key_path, file_path, "decrypt")
                     self.result = message
+                    action += " RSA"
                 case 1:
                     # Kuznechik
                     key = self.crypt_key_qle.text()
                     file_path = self.source_qle.text()
                     message = kuznechik_wrapper.kuznechik_decrypt(key, file_path)
                     self.result = message
+                    action += " KUZ"
+            timestamp = int(time.time())
+            result_hash = stribog_hash(self.result)
+            signature = 0
+            try:
+                signature = self.form_signature()
+            except Exception as e:
+                print("Signature creation failed.")
+            add_log_to_yaml(logic.values.username, action, self.result, timestamp, result_hash, signature)
 
             # После шифрования можно активировать кнопку для скачивания PDF с ЭЦП
             self.sign_pub_key_qpb.setEnabled(True)
@@ -238,13 +265,16 @@ class CryptTab(QWidget):
             traceback_str = ''.join(traceback.format_tb(e.__traceback__))
             print(traceback_str)
 
+    def form_signature(self):
+        private_key = my_crypto.rsa.import_rsa_key(self.sign_pri_key_qle.text())
+        public_key = my_crypto.rsa.import_rsa_key(self.sign_pub_key_qle.text())
+        message_hash = account_management.stribog_hash(self.result)
+        signature = my_crypto.rsa.create_signature(message_hash, private_key, public_key)
+        return signature
+
     def download_pdf_qpb_clicked(self):
         def form_output_for_pdf():
-            private_key = my_crypto.rsa.import_rsa_key(self.sign_pri_key_qle.text())
-            public_key = my_crypto.rsa.import_rsa_key(self.sign_pub_key_qle.text())
-            message_hash = account_management.stribog_hash(self.result)
-            signature = my_crypto.rsa.create_signature(message_hash, private_key)
-            assert my_crypto.rsa.check_signature(signature, message_hash, public_key)
+            signature = self.form_signature()
             line = '=================='
             output = f"{line}\nСодержание шифровки\n{line}\n{self.result}\n{line}\nЭЦП\n{line}\n{signature}"
             return output

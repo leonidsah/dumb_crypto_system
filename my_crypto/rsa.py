@@ -55,8 +55,9 @@ def decrypt(cipher, private_key):
     return int_to_string(m)
 
 
-def create_signature(message_hash, signer_private_key):
+def create_signature(message_hash, signer_private_key, signer_public_key):
     signature = encrypt(message_hash, signer_private_key)
+    assert check_signature(signature, message_hash, signer_public_key)
     return signature
 
 
@@ -99,7 +100,6 @@ def import_and_encrypt(key_path, text_file_path, mode):
         result = encrypt(source, key)
     elif mode == "decrypt":
         source = int(source)
-        print(source)
         result = decrypt(source, key)
     else:
         print("Unknown RSA work mode.")

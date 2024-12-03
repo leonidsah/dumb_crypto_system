@@ -1,13 +1,12 @@
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QTabWidget, QLabel
-from PyQt5.uic.Compiler.qtproxies import QtCore
 
 import logic.values
-from my_crypto.rsa import check_signature
-from ui.screens.main_screen.accounts_tab import AccountsTab
-from ui.screens.main_screen.check_signature_tab import CheckSignatureTab
-from ui.screens.main_screen.crypt_tab import CryptTab
-from ui.screens.main_screen.keys_tab import KeysTab
+from ui.screens.main_screen.tabs.accounts_tab import AccountsTab
+from ui.screens.main_screen.tabs.check_signature_tab import CheckSignatureTab
+from ui.screens.main_screen.tabs.crypt_tab import CryptTab
+from ui.screens.main_screen.tabs.keys_tab import KeysTab
+from ui.screens.main_screen.tabs.logs_tab import LogsTab
 
 
 class MainAppScreen(QWidget):
@@ -20,6 +19,7 @@ class MainAppScreen(QWidget):
         self.keys_tab = KeysTab()
         self.check_signature_tab = CheckSignatureTab()
         self.accounts_tab = AccountsTab()
+        self.logs_tab = LogsTab()
         # Вкладка "Шифрование"
         self.tabs.addTab(self.crypt_tab, "Шифрование")
         # Вкладка "Ключи"
@@ -28,6 +28,8 @@ class MainAppScreen(QWidget):
         self.tabs.addTab(self.check_signature_tab, "Проверка ЭЦП")
         # Вкладка "Аккаунты"
         self.tabs.addTab(self.accounts_tab, "Аккаунты")
+        # Вкладка "Шифровки"
+        self.tabs.addTab(self.logs_tab, "Шифровки")
 
         login_ql = QLabel()
         login_ql.setStyleSheet("color: gray;")
@@ -43,7 +45,10 @@ class MainAppScreen(QWidget):
         super().showEvent(event)
         self.login_ql.setText("Аккаунт: 👤" + ("[NO_USER]" if logic.values.username is None else logic.values.username))
 
-    def hide_accounts_tab(self):
+    def hide_unprivileged(self):
         index = self.tabs.indexOf(self.accounts_tab)
+        if index != -1:
+            self.tabs.removeTab(index)
+        index = self.tabs.indexOf(self.logs_tab)
         if index != -1:
             self.tabs.removeTab(index)
