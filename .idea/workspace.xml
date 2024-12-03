@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="46815e6e-a9c8-4338-8c8f-5aa8beeac255" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dumb_crypto_system.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/DejaVuSans.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icon_chatgpt.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logic/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logic/account_management.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logic/accounts.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logic/mfa/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logic/mfa/my_totp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logic/mfa/qr_code.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logic/mfa/totp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logic/values.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_crypto/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_crypto/check_algos.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_crypto/eriebanksy-kuznyechik.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_crypto/kuznechik_wrapper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_crypto/prime_generator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_crypto/rsa.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my_crypto/stribog.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texts_and_keys/1.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texts_and_keys/2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texts_and_keys/3.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texts_and_keys/4.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texts_and_keys/PRIVATE_KEY_2048.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texts_and_keys/PRIVATE_KEY_4096.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texts_and_keys/PRIVATE_KEY_4096_FF.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texts_and_keys/PUBLIC_KEY_2048.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texts_and_keys/PUBLIC_KEY_4096.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texts_and_keys/PUBLIC_KEY_4096_FF.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texts_and_keys/kuz_dec.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texts_and_keys/kuz_enc.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texts_and_keys/message_big.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texts_and_keys/message_small.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texts_and_keys/rsa_dec_4096.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/texts_and_keys/rsa_enc_4096.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/qt_application.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/screens/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/screens/auth_screen/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/screens/auth_screen/auth_screen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/screens/login_screen/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/screens/login_screen/login_screen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/screens/main_screen/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/screens/main_screen/accounts_tab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/screens/main_screen/check_signature_tab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/screens/main_screen/crypt_tab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/screens/main_screen/keys_tab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/screens/main_screen/main_screen.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2ol1MLlfQnb9wvBEfBE5NS3vaqU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.dumbcrypto.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main (qt app).executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.totp.executor&quot;: &quot;Run&quot;,
+    &quot;Python.values.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/leoni/PycharmProjects/dumb_crypto_system/logic&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\leoni\PycharmProjects\dumb_crypto_system\assets" />
+      <recent name="C:\Users\leoni\PycharmProjects\dumb_crypto_system\ui\screens\main_screen" />
+      <recent name="C:\Users\leoni\PycharmProjects\dumb_crypto_system\ui\screens\login_screen" />
+      <recent name="C:\Users\leoni\PycharmProjects\dumb_crypto_system\ui\screens\auth_screen" />
+      <recent name="C:\Users\leoni\PycharmProjects\dumb_crypto_system\logic" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main (qt app)">
+    <configuration name="account_management" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="dumb_crypto_system" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (dumb_crypto_system)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\leoni\PycharmProjects\dumb_crypto_system\dumb_crypto_system\account_management.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main (qt app)" type="PythonConfigurationType" factoryName="Python">
+      <module name="dumb_crypto_system" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (dumb_crypto_system)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="my_rsa" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="dumb_crypto_system" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (dumb_crypto_system)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\leoni\PycharmProjects\dumb_crypto_system\my_rsa\my_rsa.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="my_rsa" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="dumb_crypto_system" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/my_rsa_package" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\leoni\PycharmProjects\dumb_crypto_system\my_rsa\my_rsa.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="prime_generator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="dumb_crypto_system" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/my_rsa" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/my_rsa/prime_generator.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="totp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="dumb_crypto_system" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/logic/mfa" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/logic/mfa/totp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="values" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="dumb_crypto_system" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/logic" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/logic/values.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.account_management" />
+      <item itemvalue="Python.my_rsa" />
+      <item itemvalue="Python.main (qt app)" />
+      <item itemvalue="Python.totp" />
+      <item itemvalue="Python.values" />
+      <item itemvalue="Python.prime_generator" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.values" />
+        <item itemvalue="Python.totp" />
+        <item itemvalue="Python.prime_generator" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-fb887030ada0-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.21565.199" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="46815e6e-a9c8-4338-8c8f-5aa8beeac255" name="Changes" comment="" />
+      <created>1731429298536</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731429298536</updated>
+    </task>
+    <servers />
+  </component>
+</project>
