@@ -92,6 +92,7 @@ class CheckSignatureTab(QWidget):
             f = open(self.source_qle.text(), 'r')
             text = f.read()
             message_hash = account_management.stribog_hash(text)
+            print(f"check_signature, message hash: {message_hash}")
             check = my_crypto.rsa.check_signature(signature, message_hash, public_key)
             if check:
                 self.status_ql.setText("Подлинность автора текста подтверждена")

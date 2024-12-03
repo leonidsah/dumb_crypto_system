@@ -269,6 +269,7 @@ class CryptTab(QWidget):
         private_key = my_crypto.rsa.import_rsa_key(self.sign_pri_key_qle.text())
         public_key = my_crypto.rsa.import_rsa_key(self.sign_pub_key_qle.text())
         message_hash = account_management.stribog_hash(self.result)
+        print(f"form_signature, message hash: {message_hash}")
         signature = my_crypto.rsa.create_signature(message_hash, private_key, public_key)
         return signature
 
