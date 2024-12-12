@@ -6,7 +6,7 @@ import yaml
 def generate_secret():
     return pyotp.random_base32()
 
-def get_totp_key(login, filepath=r"C:\Users\leoni\PycharmProjects\dumb_crypto_system\logic\accounts.yaml"):
+def get_totp_key(login, filepath=r"logic/accounts.yaml"):
     try:
         # Загрузка данных из YAML-файла
         with open(filepath, "r") as file:
@@ -32,7 +32,7 @@ def verify_totp(login, input):
     totp = pyotp.TOTP(secret_key)
     return totp.verify(input)
 
-def is_totp_set_up(login, filepath=r"C:\Users\leoni\PycharmProjects\dumb_crypto_system\logic\accounts.yaml"):
+def is_totp_set_up(login, filepath=r"logic/accounts.yaml"):
     try:
         # Загрузка данных из YAML-файла
         with open(filepath, "r") as file:

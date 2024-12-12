@@ -70,7 +70,7 @@ class CryptTab(QWidget):
         # Форма для выбора ключа шифрования для ЭЦП
         sign_pub_key_qle = QLineEdit()
         sign_pub_key_qle.setPlaceholderText("my_public_key.key")
-        sign_pub_key_qle.setText(r"C:\key_samples\PUBLIC_KEY_2048.key")
+        sign_pub_key_qle.setText(r"texts_and_keys/PUBLIC_KEY_2048.key")
         sign_pub_key_qle.setReadOnly(True)  # Только для отображения
         sign_pub_key_qle.textChanged.connect(self.crypt_key_qle_changed)
         sign_pub_key_qle.textChanged.connect(self.sign_pub_key_qle_changed)
@@ -93,7 +93,7 @@ class CryptTab(QWidget):
         # Форма для выбора ключа шифрования для ЭЦП
         sign_pri_key_qle = QLineEdit()
         sign_pri_key_qle.setPlaceholderText("my_private_key.key")
-        sign_pri_key_qle.setText(r"C:\key_samples\PRIVATE_KEY_2048.key")
+        sign_pri_key_qle.setText(r"texts_and_keys/PRIVATE_KEY_2048.key")
         sign_pri_key_qle.setReadOnly(True)  # Только для отображения
         sign_pri_key_qle.textChanged.connect(self.crypt_key_qle_changed)
         sign_pri_key_qle.textChanged.connect(self.sign_pub_key_qle_changed)

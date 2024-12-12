@@ -106,18 +106,10 @@ def import_and_encrypt(key_path, text_file_path, mode):
         result = None
     return result
 
-
-if __name__ == "__main1__":
-    import_and_encrypt(r"C:\Users\leoni\PycharmProjects\dumb_crypto_system\rsa_keys\PRIVATE_KEY.key",
-                       r"C:\Users\leoni\PycharmProjects\dumb_crypto_system\rsa_keys\result1.txt",
-                       "decrypt")
-
 if __name__ == "__main__":
     # print("keys...")
     # public_key, private_key = generate_keys(8192)
     # print("exporting...")
-    # export_rsa_key(public_key, "C:/Users/leoni/Desktop/public.key", "PUBLIC KEY")
-    # export_rsa_key(private_key, "C:/Users/leoni/Desktop/private.key", "PRIVATE KEY")
 
     print("importing keys...")
     public_key = import_rsa_key(r"/rsa_keys/PUBLIC_KEY_2048.key")

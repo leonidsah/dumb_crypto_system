@@ -10,7 +10,9 @@
   <component name="ChangeListManager">
     <list default="true" id="46815e6e-a9c8-4338-8c8f-5aa8beeac255" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/accounts.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/logic/accounts.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logic/logs.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/logic/logs.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic/values.py" beforeDir="false" afterPath="$PROJECT_DIR$/logic/values.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,11 +240,11 @@
     </configuration>
     <list>
       <item itemvalue="Python.account_management" />
-      <item itemvalue="Python.my_rsa" />
       <item itemvalue="Python.main (qt app)" />
+      <item itemvalue="Python.my_rsa" />
+      <item itemvalue="Python.prime_generator" />
       <item itemvalue="Python.totp" />
       <item itemvalue="Python.values" />
-      <item itemvalue="Python.prime_generator" />
     </list>
     <recent_temporary>
       <list>

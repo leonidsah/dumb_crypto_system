@@ -1,7 +1,7 @@
 import yaml
 
 def add_log_to_yaml(login, action, result, timestamp, result_hash, signature,
-                    file_path=r"C:\Users\leoni\PycharmProjects\dumb_crypto_system\logic\logs.yaml"):
+                    file_path=r"logic/logs.yaml"):
     with open(file_path, 'r', encoding='utf-8') as file:
         data = yaml.safe_load(file)
 

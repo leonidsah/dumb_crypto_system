@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import (
 
 
 class LogsTab(QWidget):
-    def __init__(self, logs_path = r"C:\Users\leoni\PycharmProjects\dumb_crypto_system\logic\logs.yaml"):
+    def __init__(self, logs_path = r"logic/logs.yaml"):
         super().__init__()
         layout = QVBoxLayout()
 
@@ -62,7 +62,7 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
 
     # Путь к YAML файлу
-    logs_path = r"C:\Users\leoni\PycharmProjects\dumb_crypto_system\logic\logs.yaml"
+    logs_path = r"logic/logs.yaml"
 
     window = LogsTab(logs_path)
     window.resize(800, 600)

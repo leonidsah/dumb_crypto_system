@@ -1,3 +1,3 @@
-skip_auth = True
+skip_auth = False
 username = None
 
